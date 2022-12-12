@@ -1,0 +1,34 @@
+// propsINclasssComponent file
+
+import React from "react";
+class Component1 extends React.Component{
+    render() {
+      return (
+        <div>
+          <p>{this.props.prop1}</p>
+        </div>
+      )
+    }
+}
+
+export default Component1;
+
+//--------------------------------------------------------------------
+
+//how we can sent the props to the --> Component1 from --> App.js file
+
+import logo from './logo.svg';
+import './App.css';
+import HeaderComponent from './Components/headerComponent';
+import Component1 from './Components/propsINclassComponent';
+
+function App() {
+  return (
+    <div>
+      <HeaderComponent/>
+      <Component1 prop1={"Welcome"}/>
+    </div>
+  );
+}
+
+export default App;
