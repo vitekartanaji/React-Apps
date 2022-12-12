@@ -1,4 +1,5 @@
 // propsINclasssComponent file
+// we can pass props to the Component1 (Simple props)
 
 import React from "react";
 class Component1 extends React.Component{
@@ -32,3 +33,54 @@ function App() {
 }
 
 export default App;
+
+//---------------------------------------------------------------------
+//---------------------------------------------------------------------
+
+// we can send props to any component in three waye
+//1- using simple props
+//2- creating separate props object
+//3- direct passing the object to the child component
+
+
+// App.js file (Parent Component) ( We used all three ways )
+
+import logo from './logo.svg';
+import './App.css';
+import HeaderComponent from './Components/headerComponent';
+import Component1 from './Components/propsINclassComponent';
+
+function App() {
+  
+  const propList={
+    firstName:"Tanaji",
+    lastName:"Vitekar"
+  }
+
+  return (
+    <div>
+      <HeaderComponent/>
+      <Component1 prop1={"Welcome"} prop2={propList} prop3={{Mo_Number:9834592981, Address:"Somewadi"}}/>
+    </div>
+  );
+}
+
+export default App;
+
+// Component1.js file (Child Component) ( We can used all props )
+
+import React from "react";
+class Component1 extends React.Component{
+    render() {
+      return (
+        <div>
+          <p>{this.props.prop1}</p>
+          <p>FullName: {this.props.prop2.firstName} {this.props.prop2.lastName}</p>
+          <p>Mobile Number: {this.props.prop3.Mo_Number}</p>
+          <p>Address: {this.props.prop3.Address}</p>
+        </div>
+      )
+    }
+}
+
+export default Component1;
