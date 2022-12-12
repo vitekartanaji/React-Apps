@@ -1,3 +1,4 @@
+// Simple class component (without state & props)
 
 import React from "react";
 class HeaderComponent extends React.Component{
