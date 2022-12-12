@@ -1,1 +1,10 @@
 
+import React from "react";
+class HeaderComponent extends React.Component{
+    render(){
+        return(
+        <p>Tanaji Vitekar</p>
+    )}
+}
+
+export default HeaderComponent;
