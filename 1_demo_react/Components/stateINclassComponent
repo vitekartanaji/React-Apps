@@ -1,0 +1,26 @@
+// stateINclassComponent.js file
+
+import React from "react";
+
+class ClassComponent2 extends React.Component{
+    constructor(){
+        super();
+        this.state={
+            Name:"Tanaji",
+            Age:24,
+            City:"Somewadi"
+        }
+
+    }
+    render(){
+        return(
+            <>
+            <p>Name: {this.state.Name}</p>
+            <p>Age: {this.state.City}</p>
+            <p>City: {this.state.Age}</p>
+            </>
+        )
+    }
+}
+
+export default ClassComponent2;
