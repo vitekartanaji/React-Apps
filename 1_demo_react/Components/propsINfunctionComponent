@@ -1,0 +1,49 @@
+// 
+
+// App.js file
+
+import logo from './logo.svg';
+import './App.css';
+import HeaderComponent from './Components/headerComponent';
+import Classcomponent from './Components/propsINclassComponent';
+import FunctionComponent from './Components/propsINfunctionComponent';
+
+function App() {
+
+  const propList1={
+    firstName:"Tanaji",
+    lastName:"Vitekar"
+  }
+
+  const propList2={
+    Gender:"Male",
+    Age:24
+  }
+  return (
+    <div>
+      {/* <HeaderComponent/> */}
+      <Classcomponent prop1={"Welcome"} prop2={propList1} prop3={{Mo_Number:9834592981, Address:"Somewadi"}}/>
+      <FunctionComponent prop4={"Thank You"} prop5={propList2} prop6={{State:"Maharashtra", Pincode:413314}}/>
+    </div>
+  );
+}
+
+export default App;
+
+//--------------------------------------------------------------------------------------------------------------------
+
+// propsINfunctionComponent.js file
+
+function FunctionComponent(abc){                         // We can use any keyword any at "props" like "abc" 
+    return(
+        <>
+        --------------------------------------
+        <p>Gender: {abc.prop5.Gender}</p>
+        <p>State: {abc.prop6.State}</p>
+        <p>Pincode: {abc.prop6.Pincode}</p>
+        <p>{abc.prop4}.</p>
+        </>
+    )
+}
+
+export default FunctionComponent;
