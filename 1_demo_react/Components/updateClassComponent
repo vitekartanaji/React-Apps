@@ -1,0 +1,38 @@
+// stateINclassComponent.js file
+// '.bind' keyword is used while passing argument as value to the 'updateAge' function
+// In class component 'Normal function' & 'Function' keyword is not supported, that's why we have to use "Arrow Function" without function keyword.
+
+import React from "react";
+
+class ClassComponent2 extends React.Component{
+    constructor(){
+        super();
+        this.state={
+            Name:"Tanaji",
+            Age:24,
+            City:"Somewadi"
+        }
+
+    }
+
+    updateAge=(newAge)=>{
+        this.setState({
+            Age:newAge
+            
+        })
+    }
+
+    render(){
+        return(
+            <>
+            <p>Name: {this.state.Name}</p>
+            <p>Age: {this.state.City}</p>
+            <button onClick={this.updateAge.bind(this,35)}>Click</button>
+            <p>City: {this.state.Age}</p>
+            <p>{this.props.prop0}</p>
+            </>
+        )
+    }
+}
+
+export default ClassComponent2;
