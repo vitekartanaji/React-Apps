@@ -1,0 +1,19 @@
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import "bootstrap/dist/js/bootstrap.bundle.js"
+import NavBar from './Components/navBar';
+import WebRoutes from './Components/webRoutes';
+
+function App() {
+  return (
+    <div className="container-fluid">
+      <header>
+        <NavBar/>
+        <WebRoutes/>
+      </header>
+        
+    </div>
+  );
+}
+
+export default App;
