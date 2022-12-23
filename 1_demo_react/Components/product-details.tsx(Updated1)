@@ -1,0 +1,17 @@
+import{useParams} from "react-router-dom"
+import ProductCard from "./product-Card";
+import products from "../Data/product.json";
+
+const ProductDetails=()=>{
+    const param= useParams();
+    const product=products.find(x=>x.sku===parseInt(param.sku||''));
+    return(
+        <>
+        <div className="row">
+            <ProductCard {...product}/>
+        </div>
+        </>
+    )
+}
+
+export default ProductDetails;
