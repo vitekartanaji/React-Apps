@@ -1,0 +1,16 @@
+import { useState } from "react";
+
+const HomePage=()=>{
+
+    const [name, setName]=useState("Tanaji");
+
+    return(
+        <>
+        <h1>This is a HomePage.</h1>
+        <h3>My name is {name}...</h3>
+        <button type="button" className="btn btn-primary" onClick={()=>setName("Vitekar")}>Change Name</button>
+        </>
+    )
+}
+
+export default HomePage;
