@@ -1,0 +1,48 @@
+import image from "./img4.png";
+
+const ProfileCard = () => {
+  return (
+    <>
+      <button
+        className="btn btn-primary"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasLeft"
+        aria-controls="offcanvasLeft"
+      >
+        See Profile
+      </button>
+
+      <div
+        className="offcanvas offcanvas-start"
+        id="offcanvasLeft"
+        aria-labelledby="offcanvasLeftLabel"
+      >
+        <div className="offcanvas-header">
+          <h5 id="offcanvasLeftLabel">User Profile</h5>
+          <button
+            type="button"
+            className="btn-close text-reset"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div className="offcanvas-body">
+          <div className="card bg-primary">
+            <img src={image} className="card-img-top" alt="Profile Image" />
+            <div className="card-body">
+              <h5 className="card-title">Tanaji Vitekar</h5>
+              <p className="card-text">Somewadi,Solapur</p>
+            </div>
+            <ul className="list-group list-group-flush">
+              <li className="list-group-item">Bcs(Computer Science)</li>
+              <li className="list-group-item">Passout Year-2021</li>
+              <li className="list-group-item">Solapur University Solapur</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+export default ProfileCard;
