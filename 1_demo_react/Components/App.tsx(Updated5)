@@ -1,0 +1,23 @@
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import "bootstrap/dist/js/bootstrap.bundle.js"
+import NavBar from './Components/navBar';
+import WebRoutes from './Components/webRoutes';
+import ProfileCard from './Components/profile-card';
+
+function App() {
+  return (
+    <div className="container-fluid">
+      <header>
+        <NavBar/>
+        <div className='row'>
+          <div><ProfileCard/></div>
+          <div><WebRoutes/></div>
+        </div>
+      </header>
+        
+    </div>
+  );
+}
+
+export default App;
