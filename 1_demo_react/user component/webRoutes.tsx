@@ -1,0 +1,33 @@
+import { Navigate, Route, Routes } from "react-router-dom"
+import HomePage from "./homePage";
+import ProductsList from "./product-List";
+import products from '../Data/product.json'
+import UserList from "./user-list";
+import ErrorPage from "./Error";
+import ProductDetails from "./product-datails";
+import TopicWrap from "./topic";
+import ReactLayout from "./react-Bootstrap";
+import Users from "../Data/users.json"
+import UserDetails from "./user-details";
+
+const WebRoutes=()=>{
+    return(
+        <Routes>
+            <Route path="/" element={<HomePage/>}/>
+            <Route path="/product-list" element={<ProductsList data={products}/>}/>
+            <Route path="/product-details/:sku/:name" element={<ProductDetails/>}/>
+            <Route path="/product-details/:sku" element={<ProductDetails/>}/>
+
+            <Route path="/user-list" element={<UserList UserInfo={Users}/>}/>
+            <Route path="/user-list" element={<UserList UserInfo={[]}/>}/>
+            <Route path="/user-details/:id/:name" element={<UserDetails/>}/>
+            <Route path="/user-details/:id" element={<UserDetails/>}/>
+            <Route path="/topic" element={<TopicWrap/>}/>
+            <Route path="/react-bootstrap-layout-2.3" element={<ReactLayout/>}/>
+            <Route path="/path-not-found" element={<ErrorPage/>}/>
+            <Route path="*" element={<Navigate to="/page-not-found"/>}/>
+        </Routes>
+    )
+}
+
+export default WebRoutes;
